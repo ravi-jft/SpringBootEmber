@@ -5,6 +5,7 @@ import com.goGame.domain.Attribute;
 import com.goGame.domain.Event;
 
 import java.util.List;
+import java.util.Set;
 
 
 /**

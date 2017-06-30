@@ -13,9 +13,10 @@ import java.util.List;
 /**
  * Created by ravi on 27/6/17.
  */
-@RequestMapping("/event")
+
 @CrossOrigin
 @RestController
+@RequestMapping("/event")
 public class EventController {
 
     @Autowired
@@ -27,10 +28,13 @@ public class EventController {
         eventService.addEvent(event);
     }
 
-    @RequestMapping(value = "/create11",method = RequestMethod.POST,produces = MediaType.APPLICATION_JSON_VALUE,consumes = MediaType.APPLICATION_JSON_VALUE)
+
+    @RequestMapping(value = "/create11",method = RequestMethod.POST)
     public void saveOrUpdate12(@RequestBody Dataparam dataparam){
-        System.out.println("===attribute===="+dataparam.getAttribute());
-        eventService.addAttribute(dataparam.getAttribute());
+
+        System.out.println("=======dataparam====="+dataparam.getType());
+        System.out.println("===attribute===="+dataparam.getAttributes());
+        eventService.addAttribute(dataparam.getAttributes());
     }
 
     @RequestMapping(value = "/getAllData",method = RequestMethod.GET)

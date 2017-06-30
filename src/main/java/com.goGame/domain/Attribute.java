@@ -1,6 +1,6 @@
 package com.goGame.domain;
 
-import org.codehaus.jackson.map.annotate.JsonRootName;
+import com.fasterxml.jackson.annotation.JsonRootName;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -10,7 +10,7 @@ import java.io.Serializable;
  */
 @Entity
 @Table(name = "attribute")
-@JsonRootName(value = "attribute")
+@JsonRootName(value = "attributes")
 public class Attribute implements Serializable {
     private static final long serialVersionUID = 145863898128176136L;
 
